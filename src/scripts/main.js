@@ -16,6 +16,8 @@ function sortList(list) {
 
   parents.innerHTML = '';
   sortedList.forEach((item) => parents.appendChild(item));
+
+  return sortedList;
 }
 
 function getEmployees(list) {
@@ -29,6 +31,4 @@ function getEmployees(list) {
 
 sortList(listItem);
 
-console.log(listItem);
-
-console.log(getEmployees(listItem));
+getEmployees(sortList(listItem));
